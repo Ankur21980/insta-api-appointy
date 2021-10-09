@@ -1,0 +1,17 @@
+package models
+
+import "gopkg.in/mgo.v2/bson"
+
+type User struct {
+	Id     bson.ObjectId `json:"id" bson:"_id"`
+	Name   string        `json:"name" bson:"name"`
+	Gender string        `json:"gender" bson:"gender"`
+	Age    int           `json:"age" bson:"age"`
+}
+
+type Post struct {
+	Id      bson.ObjectId       `json:"id" bson:"_id"`
+	Caption string              `json:"caption" bson:"caption"`
+	Image   string              `json:"image" bson:"image"`
+	Posted  bson.MongoTimestamp `json:"posted" bson:"_posted"`
+}
